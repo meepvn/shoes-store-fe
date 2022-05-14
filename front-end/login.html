@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal hidden modal-add">
+        <div class="modal__overlay">
+        </div>
+
+        <div class="modal__content">
+            <div class="content__header">
+                <h3 class="content__header--heading">Thêm khách hàng</h3>
+                <i class="fa-solid fa-xmark close" onclick="handleHiddenModal()"></i>
+            </div>
+            <div class="content__form">
+                <div class="content__form--group ">
+                    <input type="text" name="name" class="content__form--input" placeholder="Tên khách hàng">
+                    <small></small>
+                </div>
+                <div class="content__form--group">
+                    <input type="text" name="phone" class="content__form--input"
+                        placeholder="Số điện thoại khách hàng">
+                    <small></small>
+                </div>
+                <div class="content__form--group">
+                    <input type="text" name="address" class="content__form--input"
+                        placeholder="Địa chỉ của khách hàng">
+                    <small></small>
+                </div>
+                <div class="content__form--group">
+                    <input type="email" name="email" class="content__form--input"
+                        placeholder="Email của khách hàng">
+                    <small></small>
+                </div>
+                <div class="content__form--group">
+                    <button class="btn btn__modal" id="btn-add">Thêm</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="modal hidden modal-update">
+    <div class="modal__overlay">
+    </div>
+    <div class="modal__content">
+        <div class="content__header">
+            <h3 class="content__header--heading">Sửa thông tin khách hàng</h3>
+            <i class="fa-solid fa-xmark close" onclick="handleHiddenModal()"></i>
+        </div>
+        <div class="content__form">
+            <div class="content__form--group">
+                <input type="text" name="nameUpdate" class="content__form--input" placeholder="Tên khách hàng">
+            </div>
+            <div class="content__form--group">
+                <input type="text" name="phoneUpdate" class="content__form--input"
+                    placeholder="Số điện thoại khách hàng">
+            </div>
+            <div class="content__form--group">
+                <input type="text" name="addressUpdate" class="content__form--input"
+                    placeholder="Địa chỉ của khách hàng">
+            </div>
+            <div class="content__form--group">
+                <input type="email" name="emailUpdate" class="content__form--input"
+                    placeholder="Email của khách hàng">
+            </div>
+            <div class="content__form--group">
+                <button class="btn btn__modal" id="btn-update">Lưu thông tin</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

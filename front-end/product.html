@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.0-web/css/all.css">
+    <link rel="icon" href="img/img1.jpg" type="img/x-icon">
+    <title>Addmin</title>
+
+</head>
+
+<body>
+
+
+
+    <div class="header">
+        <div class="logo">
+            <img src="img/img1.jpg" alt="">
+        </div>
+        <div class="account">
+            <i class="fa-solid fa-user"></i> Đăng xuất
+        </div>
+    </div>
+    <div class="body">
+        <div class="nav">
+            <ul>
+                <li class="list home"><i class="fa-solid fa-house"></i> Trang chủ</li>
+                <li class="list "><a href="customer.html"><i class="fa-solid fa-users"></i> Khách hàng</a></li>
+                <li class="list active"><i class="fa-solid fa-bag-shopping"></i> Sản phẩm</li>
+                <li class="list"><a href="#"><i class="fa-solid fa-paste"></i> Đơn hàng</a></li>
+                <li class="list"><a href="#">Thống kê báo cáo</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="container__header">
+                <h2>Sản phẩm</h2>
+                <div class="header__search">
+                    <input type="text" id="search" placeholder="Tìm kiếm sản phẩm">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button class="btn  btn__add" onclick="handleShowModalAdd()">
+                    <i class="fa-solid fa-circle-plus"></i> Thêm mới
+                </button>
+            </div>
+
+            <table id="tbl">
+                <tr>
+                    <th>Mã sản phẩm</th>
+                    <th>
+                        Tên sản phẩm</th>
+                    <th>Loại</th>
+                    <th>Hãng sản xuất</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th colspan="2">Chỉnh sửa</th>
+                </tr>
+            </table>
+        </div>
+        <div class="modal hidden modal-add">
+            <div class="modal__overlay">
+            </div>
+
+            <div class="modal__content">
+                <div class="content__header">
+                    <h3 class="content__header--heading">Thêm sản phẩm</h3>
+                    <i class="fa-solid fa-xmark close" onclick="handleHiddenModal()"></i>
+                </div>
+                <div class="content__form">
+                    <div class="content__form--group">
+                        <input type="text" name="TenSP" class="content__form--input" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="content__form--group">
+                        <input type="text" name="Loai" class="content__form--input"
+                            placeholder="Loại">
+                    </div>
+                    <div class="content__form--group">
+                        <input type="text" name="HangSX" class="content__form--input"
+                            placeholder="Hãng sản xuất">
+                    </div>
+                    <div class="content__form--group">
+                        <input type="number " name="DonGia" class="content__form--input"
+                            placeholder="Đơn giá">
+                    </div>
+                    <div class="content__form--group">
+                        <input type="number" name="SoLuong" class="content__form--input"
+                            placeholder="Số lượng sản phẩm">
+                    </div>
+                    <div class="content__form--group">
+                        <input type="file" name="Img" id="img-link" class="content__form--input" value="Chọn ảnh">
+                    </div>
+                    <div class="content__form--group">
+                        <button class="btn btn__modal" id="btn-add">Thêm</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal hidden modal-update">
+        <div class="modal__overlay">
+        </div>
+
+        <div class="modal__content">
+            <div class="content__header">
+                <h3 class="content__header--heading">Sửa thông tin khách hàng</h3>
+                <i class="fa-solid fa-xmark close" onclick="handleHiddenModal()"></i>
+            </div>
+            <div class="content__form">
+                <div class="content__form--group">
+                    <input type="text" name="TenSPUpdate" class="content__form--input" placeholder="Tên sản phẩm">
+                </div>
+                <div class="content__form--group">
+                    <input type="text" name="LoaiUpdate" class="content__form--input"
+                        placeholder="Loại">
+                </div>
+                <div class="content__form--group">
+                    <input type="text" name="HangSXUpdate" class="content__form--input"
+                        placeholder="Hãng sản xuất">
+                </div>
+                <div class="content__form--group">
+                    <input type="number" name="DonGiaUpdate" class="content__form--input"
+                        placeholder="Đơn giá">
+                </div>
+                <div class="content__form--group">
+                    <input type="number" name="SoLuongUpdate" class="content__form--input"
+                        placeholder="Số lượng sản phẩm">
+                </div>
+                <div class="content__form--group">
+                    <input type="file" name="ImgUpdate" id="img-linkUpdate" class="content__form--input" value="Chọn ảnh">
+                </div>
+                <div class="content__form--group">
+                    <button class="btn" id="btn-update">Lưu thông tin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- <script src=".././test.js"></script> -->
+    <script src="./product.js"></script>
+</body>
+
+</html>

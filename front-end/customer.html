@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.0-web/css/all.css">
+    <link rel="icon" href="icon/favicon-32x32.png" type="img/png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff"> -->
+    <title>Admin</title>
+
+</head>
+
+<body>
+
+
+
+    <div class="header">
+        <div class="logo">
+            <img src="img/img1.jpg" alt="">
+        </div>
+        <div class="account">
+            <i class="fa-solid fa-user"></i> Đăng xuất
+        </div>
+    </div>
+    <div class="body">
+        <div class="nav">
+            <ul>
+                <li class="list home"><i class="fa-solid fa-house"></i> Trang chủ</li>
+                <li class="list active"><i class="fa-solid fa-users"></i> Khách hàng</li>
+                <li class="list"><a href="product.html"><i class="fa-solid fa-bag-shopping"></i> Sản phẩm</a></li>
+                <li class="list"><a href="#"><i class="fa-solid fa-paste"></i> Đơn hàng</a></li>
+                <li class="list"><a href="#">Thống kê báo cáo</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="container__header">
+                <h2>Khách hàng</h2>
+                <div class="header__search">
+                    <input type="text" id="search" placeholder="Tìm kiếm khách hàng">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button class="btn  btn__add">
+                    <i class="fa-solid fa-circle-plus"></i> Thêm mới
+                </button>
+            </div>
+
+            <table id="tbl">
+                <tr>
+                    <th>Mã khách hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Email</th>
+                    <th colspan="2">Chỉnh sửa</th>
+                </tr>
+            </table>
+        </div>
+        <div class="modal hidden modal-add">
+            <div class="modal__overlay">
+            </div>
+
+            <div class="modal__content">
+                <div class="content__header">
+                    <h3 class="content__header--heading">Thêm khách hàng</h3>
+                    <i class="fa-solid fa-xmark close" onclick="handleHiddenModal()"></i>
+                </div>
+                <div class="content__form">
+                    <div class="content__form--group ">
+                        <input type="text" name="name" class="content__form--input" placeholder="Tên khách hàng">
+                        <small></small>
+                    </div>
+                    <div class="content__form--group">
+                        <input type="text" name="phone" class="content__form--input"
+                            placeholder="Số điện thoại khách hàng">
+                        <small></small>
+                    </div>
+                    <div class="content__form--group">
+                        <input type="text" name="address" class="content__form--input"
+                            placeholder="Địa chỉ của khách hàng">
+                        <small></small>
+                    </div>
+                    <div class="content__form--group">
+                        <input type="email" name="email" class="content__form--input"
+                            placeholder="Email của khách hàng">
+                        <small></small>
+                    </div>
+                    <div class="content__form--group">
+                        <button class="btn btn__modal" id="btn-add">Thêm</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal hidden modal-update">
+        <div class="modal__overlay">
+        </div>
+        <div class="modal__content">
+            <div class="content__header">
+                <h3 class="content__header--heading">Sửa thông tin khách hàng</h3>
+                <i class="fa-solid fa-xmark close" onclick="handleHiddenModal()"></i>
+            </div>
+            <div class="content__form">
+                <div class="content__form--group">
+                    <input type="text" name="nameUpdate" class="content__form--input" placeholder="Tên khách hàng">
+                </div>
+                <div class="content__form--group">
+                    <input type="text" name="phoneUpdate" class="content__form--input"
+                        placeholder="Số điện thoại khách hàng">
+                </div>
+                <div class="content__form--group">
+                    <input type="text" name="addressUpdate" class="content__form--input"
+                        placeholder="Địa chỉ của khách hàng">
+                </div>
+                <div class="content__form--group">
+                    <input type="email" name="emailUpdate" class="content__form--input"
+                        placeholder="Email của khách hàng">
+                </div>
+                <div class="content__form--group">
+                    <button class="btn btn__modal" id="btn-update">Lưu thông tin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- <script src=".././test.js"></script> -->
+    <script src="./customer.js"></script>
+</body>
+
+</html>
