@@ -1,9 +1,9 @@
-//icon
+
 function handle() {
   const listElement = document.getElementsByClassName("menu__taplet--mobile");
   if (listElement.length) {
     const firstElement = listElement[0];
-    firstElement.classList.toggle("show");
+    firstElement.classList.toggle("show-menu");
   }
 }
 function handleClickSearch() {
@@ -14,49 +14,44 @@ function handleClickSearch() {
   }
 }
 //data
-const arr = [
+const arr= [
   {
-    MaSP: 1,
+  MaSP: 1,
+  ImageName: "./../images/mwc.jpg",
+  TenSP: "Giày thể thao Nam Trắng",
+  DonGia: 180000,
+  SoLuong: "10",
+  Loai: "Giay the thao",
+  HangSX: "Sneaker",
+},
+{
+  MaSP: 2,
+  ImageName: "./../images/mwc.jpg",
+  TenSP: "Giày thể thao Nam Đen",
+  DonGia: 230000,
+  SoLuong: "10",
+  Loai: "Giay the thao",
+  HangSX: "Sneaker",
+},
+{
+  MaSP: 3,
+  ImageName: "./../images/mwc.jpg",
+  TenSP: "Giày thể thao Nam Trắng",
+  DonGia: 235000,
 
-    ImageName: "./../images/mwc.jpg",
-    TenSP: "Giày thể thao Nam",
-    color: "Đen",
-    DonGia: 180000,
-    SoLuong: "10",
-    Loai: "Giay the thao",
-    HangSX: "Sneaker",
-  },
-  {
-    MaSP: 2,
-    ImageName: "./../images/mwc.jpg",
-    TenSP: "Giày thể thao Nam",
-    color: "Đen",
-    DonGia: 230000,
-    SoLuong: "10",
-    Loai: "Giay the thao",
-    HangSX: "Sneaker",
-  },
-  {
-    MaSP: 3,
-    ImageName: "./../images/mwc.jpg",
-    TenSP: "Giày thể thao Nam",
-    color: "Trắng",
-    DonGia: 235000,
-
-    SoLuong: "10",
-    Loai: "Giay the thao",
-    HangSX: "Sneaker",
-  },
-  {
-    MaSP: 4,
-    ImageName: "./../images/mwc.jpg",
-    TenSP: "Giày mọi Nam",
-    color: "Trắng",
-    DonGia: "232.000 vnđ",
-    SoLuong: "10",
-    Loai: "Giay the thao",
-    HangSX: "Sneaker",
-  }
+  SoLuong: "10",
+  Loai: "Giay the thao",
+  HangSX: "Sneaker",
+},
+{
+  MaSP: 4,
+  ImageName: "./../images/mwc.jpg",
+  TenSP: "Giày mọi Nam Vàng",
+  DonGia: "232.000 vnđ",
+  SoLuong: "10",
+  Loai: "Giay the thao",
+  HangSX: "Sneaker",
+}
 ];
 
 let pages = 1;
@@ -79,15 +74,24 @@ const display = (items, list, rows, pages) => {
     // console.log(pageItem);
     const item = document.createElement("div");
     item.classList.add("item");
+    // 
     item.innerHTML = `
-            <div class="image">
-            <img class=" showDetail img-product" src="${pageItem.ImageName}" alt="">
+   
+            <div class="image show-modal">
+            <img class=" img-product" src="${pageItem.ImageName}" alt="">
             </div>
-            <span class="name showDetail">${pageItem.TenSP}</span>
+            <span class="name show-modal">${pageItem.TenSP}</span>
             <span class="color"> - ${pageItem.color}</span>
             <p class="price">${pageItem.DonGia}</p>
+   
         `;
+        
     list.appendChild(item);
+    console.log(list);
+    const parent = document.querySelector(".item");
+    console.log(parent);
+        parent.setAttribute("id-product",`${pageItem.MaSP}`)
+        
   }
 };
 
@@ -122,10 +126,10 @@ toLastPageBtn.innerHTML = '<i class="fa-solid fa-angles-right"></i>';
 paginationElement.appendChild(toLastPageBtn);
 
 const listBtn = document.querySelectorAll(".btn-pagination");
-console.log(listBtn);
+// console.log(listBtn);
 for (let index = 0; index < listBtn.length; index++) {
   const btnItem = listBtn[index];
-  console.log(btnItem);
+  // console.log(btnItem);
   btnItem.addEventListener("click", function () {
     let index1 = parseInt(btnItem.innerText);
     pages = index1;
@@ -184,9 +188,9 @@ function renderData(arr) {
     return `
             <div class="item">
             <div class="image">
-            <img class="showDetail img-product" src="${record.ImageName}" alt="">
+            <img class="show-modal img-product" src="${record.ImageName}" alt="">
             </div>
-            <span class="name showDetail">${record.TenSP}</span>
+            <span class="name show-modal">${record.TenSP}</span>
             <span class="color"> - ${record.color}</span>
             <p class="price">${record.DonGia}</p>
             </div>
@@ -312,7 +316,7 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
+    this.classList.toggle("active-acc");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
@@ -337,22 +341,14 @@ for (i = 0; i < accDown.length; i++) {
   });
 }
 //modal
-function handleToggleModal() {
-  const listModalElement = document.querySelector(".modal-click");
-  const clickDetail = document.querySelectorAll(".showDetail");
-  clickDetail.forEach((item) => {
-    item.onclick = () => {
-      console.log(item);
-      listModalElement.classList.toggle("show-modal");
-    };
-  });
+
   // if(listModalElement.length)
   // {
   //     const modalElement= listModalElement[0]
   //     modalElement.classList.toggle("show-modal");
   // }
-}
-handleToggleModal();
+
+// handleToggleModal();
 // so luong sp
 const decrease = document.querySelector(".decrease");
 console.log(decrease);
@@ -372,42 +368,67 @@ increase.onclick = () => {
   countNumber.value++;
   decrease.style.background = "#fff";
 };
-const currentNumber = 1;
-function handleCount(element) {
-  if (element === "tru") {
-    currentNumber--;
-  } else if (element === "cong") {
-    currentNumber++;
-  }
-}
 
-//
-const hideBtn = document.querySelector("#hide"); //icon
-const hehehe = document.querySelector(".modal-detail");
-hideBtn.addEventListener("click", () => {
-  hehehe.classList.add("hidden");
-});
 
 //showModal
-function handleShowdetail(){
-  const imgModal=document.querySelector(".img-modal")
-  const title=document.querySelector(".title-modal")
-  const priceModal=document.querySelector(".price-modal")
-  const clickProduct = document.querySelectorAll(".showDetail")
-    clickProduct.forEach((item)=>{
-      item.onclick=()=>{
-        console.log(item);
-        const result = document.querySelector(".modal-detail.hidden")
-        console.log(result);
-        result.classList.remove("hidden")
-        const parent = item.parentElement
-    const imgName=parent.querySelector(".img-product").getAttribute("src")
-    const name = item.parentElement.querySelector(".name").innerText
-    const price = item.parentElement.querySelector(".price").innerText
-    imgModal.setAttribute("src",imgName)
-    title.innerText=name;
-    priceModal.innerText=price;
+// function handleShowdetail(){
+//   const imgModal=document.querySelector(".img-modal")
+//   const title=document.querySelector(".title-modal")
+//   const priceModal=document.querySelector(".price-modal")
+//   const clickProduct = document.querySelectorAll(".showDetail")
+//     clickProduct.forEach((item)=>{
+//       item.onclick=()=>{
+//         console.log(item);
+//         const result = document.querySelector(".modal-detail.hidden")
+//         console.log(result);
+//         result.classList.remove("hidden")
+//         const parent = item.parentElement
+//     const imgName=parent.querySelector(".img-product").getAttribute("src")
+//     const name = item.parentElement.querySelector(".name").innerText
+//     const price = item.parentElement.querySelector(".price").innerText
+//     imgModal.setAttribute("src",imgName)
+//     title.innerText=name;
+//     priceModal.innerText=price;
+//     }
+//   })
+// }
+// handleShowdetail()
+const modal = document.querySelector(".modal-detail");
+//btn-close
+function handleHidden (){
+    const btnClose = document.querySelector(".btn-close");
+    console.log(btnClose);
+    btnClose.onclick = () =>{
+        modal.classList.remove("show")
+        modal.classList.add("hidden");
     }
-  })
 }
-handleShowdetail()
+handleHidden()
+
+
+//detail
+function handleDetail(){
+    const imgModal=document.querySelector(".img-modal")
+    const title=document.querySelector(".title-modal")
+    const priceModal=document.querySelector(".price-modal")
+    const clickProduct = document.querySelectorAll(".show-modal")
+    // const 
+    // console.log(clickProduct);
+    console.log(modal);
+      clickProduct.forEach((item)=>{
+        item.onclick = function(){
+            modal.classList.remove("hidden");
+            modal.classList.add("show");
+            console.log(modal);
+            const productId = item.parentElement.getAttribute('id-product');
+            console.log(productId);
+            const pickedProduct = arr.find(item=>item.MaSP==productId);
+
+            console.log(pickedProduct);
+            imgModal.setAttribute('src',pickedProduct.ImageName);
+            title.innerText = pickedProduct.TenSP;
+            priceModal.innerText = pickedProduct.DonGia;
+        }
+    })
+  }
+  handleDetail();

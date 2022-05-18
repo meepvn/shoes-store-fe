@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./../library/fontawesome-free-6.1.1-web/css/all.css">
     <link rel="stylesheet" href="./../css/style.css">
     <link rel="stylesheet" href="./../css/font.css">
-    <link rel="icon" href="./../images/logo.jpg" type="image/x-icon">
-    <title>MWCShop</title>
+    <link rel="stylesheet" href="./../css/giohang.css">
+    <link rel="icon" href="icon/favicon-32x32.png" type="img/png">
+    <title>Khiếu nại</title>
 </head>
 
 <body>
-    <div class="container-fluid wrapper">
+    <div id = "first" class="container-fluid wrapper">
         <div class="row nav">
             <div class="col-lg-5 col-12 left">
                 <ul>
@@ -26,11 +27,10 @@
             </div>
             <div class="col-lg-7 col-12 right">
                 <ul id="list-active">
-                    <li class="btn"><a href="">Trang chủ</a></li>
+                    <li class="btn"><a href="index.html">Trang chủ</a></li>
                     <li class="btn"><a href="./../html/introduce.html">Giới thiệu</a></li>
                     <li class="btn active"><a href="./../html/submit.html">Khiếu nại</a></li>
                     <li class="btn"><a href="./../html/product.html">Sản phẩm</a></li>
-                    <li class="btn"><a href=""><i class="fas fa-chevron-down"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@
                 <div class="items nav-pc">
                     <ul id="main_menu">
                         <li>
-                            <a href="">
+                            <a href="sale.html">
                                 <span class="imgs">
                                     <img src="./../images/logosale.png" alt="">
                                 </span>
@@ -103,7 +103,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="balo.html">
                                 <span class="imgs">
                                     <img src="./../images/ba-lo.png" alt="">
                                 </span>
@@ -117,7 +117,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="phukien.html">
                                 <span class="imgs">
                                     <img src="./../images/phukienhehe.jpg" alt="">
                                 </span>
@@ -143,7 +143,7 @@
                                 <li><i class="fa-solid fa-angles-right"></i><a href="">Giày cao gót</a></li>
                             </ul>
                         </li>
-                        <li><a href=""><i class="fas fa-cart-arrow-down"></i></a></li>
+                        <li><a href="giohang.html"><i class="fas fa-cart-arrow-down"></i></a></li>
                     </ul>
                 </div>
                 <div class="nav__taplet">
@@ -151,11 +151,11 @@
                 </div>
                 <div class="menu__taplet--mobile">
                     <ul>
-                        <li class="list__taplet"><a href="#">Sale độc quyền</a></li>
-                        <li class="list__taplet"><a href="#">Giày Nam</a></li>
-                        <li class="list__taplet"><a href="#">Giày Nữ</a></li>
-                        <li class="list__taplet"><a href="#">Balo</a></li>
-                        <li class="list__taplet"><a href="#">Phụ kiện</a></li>
+                        <li class="list__taplet"><a href="sale.html">Sale độc quyền</a></li>
+                        <li class="list__taplet"><a href="giaynam.html">Giày Nam</a></li>
+                        <li class="list__taplet"><a href="giaynu.html">Giày Nữ</a></li>
+                        <li class="list__taplet"><a href="balo.html">Balo</a></li>
+                        <li class="list__taplet"><a href="phukien.html">Phụ kiện</a></li>
                         <li class="list__taplet"><a href="#">Sản phẩm bán chạy</a></li>
                     </ul>
                 </div>
@@ -164,29 +164,28 @@
                 </div>
                 <div class="icon-search">
                     <i onclick="handleClickSearch()" class="fa-solid fa-magnifying-glass"></i>
-                    
                 </div>
                 <div class="col-lg-9 search-toggle">
                     <input type="text" id="search" placeholder="Tìm kiếm sản phẩm...">
                 </div>
             </div>
         </div>
-        <div class="row flickity">
+        <div class="row flickity hidden">
             <div class="col-sm-12">
                 <div class="main-carousel">
                     <div class="carousel-cell box">
                         <span>
-                            <img src="./../images/banner1.jpg" alt="">
+                            <a href=""><img src="./../images/banner1.jpg" alt=""></a>
                         </span>
                     </div>
                     <div class="carousel-cell box">
                         <span>
-                            <img src="./../images/banner2.jpg" alt="">
+                            <a href=""><img src="./../images/banner2.jpg" alt=""></a>
                         </span>
                     </div>
                     <div class="carousel-cell box">
                         <span>
-                            <img src="./../images/banner3.jpg" alt="">
+                            <a href=""><img src="./../images/banner3.jpg" alt=""></a>
                        </span>
                     </div>
                 </div>
@@ -194,106 +193,8 @@
         </div>
         <div class="list-product">
             <h3>Giày nam</h3>
-            <div class="items">
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc.jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày thể thao Jodan Nam</a></span>
-                    <span class="color">Trắng</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (1).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày mọi Nam</a></span>
-                    <span class="color">Xám</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (2).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày thể thao Adidas Nam</a></span>
-                    <span class="color">Xám</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (3).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày thể thao Nike Nam</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-            </div>
-            <div class="show-product">
-                <span class="data">
-                    <a href="./../html/giaynam.html"><i class="fas fa-angle-double-right"></i>Xem tất cả sản phẩm<i
-                            class="fas fa-angle-double-left"></i></a>
-                </span>
-            </div>
-        </div>
-        <div class="list-product">
-            <h3>Giày nữ</h3>
-            <div class="items">
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (9).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày cao gót Nữ</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (10).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày cao gót Nữ</a></span>
-                    <span class="color">Trắng</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (11).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày cao gót Nữ</a></span>
-                    <span class="color">Trắng</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (12).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Giày cao gót Nữ</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
+            <div class="items giaynam">
+                
             </div>
             <div class="show-product">
                 <span class="data">
@@ -303,52 +204,9 @@
             </div>
         </div>
         <div class="list-product">
-            <h3>Balo - Phụ kiện</h3>
-            <div class="items">
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (13).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Balo - Phụ kiện</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (14).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Balo - Phụ kiện</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (15).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Balo - Phụ kiện</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
-                <div class="item">
-                    <div class="images">
-                        <img src="./../images/mwc (16).jpg" alt="">
-                        <div class="add-product">
-                            <span class="icon-cart"><i class="fa-solid fa-cart-plus"></i></span>
-                        </div>
-                    </div>
-                    <span class="title"><a href="">Balo - Phụ kiện</a></span>
-                    <span class="color">Đen</span>
-                    <span class="cost">120.000đ</span>
-                </div>
+            <h3>Giày nữ</h3>
+            <div class="items giaynu">
+                
             </div>
             <div class="show-product">
                 <span class="data">
@@ -357,36 +215,60 @@
                 </span>
             </div>
         </div>
+        <div class="list-product">
+            <h3>Balo</h3>
+            <div class="items balo">
+                
+            </div>
+            <div class="show-product">
+                <span class="data">
+                    <a href=""><i class="fas fa-angle-double-right"></i>Xem tất cả sản phẩm<i
+                            class="fas fa-angle-double-left"></i></a>
+                </span>
+            </div>
+        </div>
+        <div class="list-product">
+            <h3>Phụ kiện</h3>
+            <div class="items phukien">
+                
+            </div>
+            <div class="show-product">
+                <span class="data">
+                    <a href=""><i class="fas fa-angle-double-right"></i>Xem tất cả sản phẩm<i
+                            class="fas fa-angle-double-left"></i></a>
+                </span>
+            </div>
+        </div>
+        <hr class="under"/>
         <div class="footer row">
-            <div class="box-footer col-lg-3 col-sm-6">
+            <div class="box-footer col-lg-4 col-sm-6">
                 <span class="logo">
                     <img src="./../images/logo.jpg" alt="">
                 </span>
                 <span class="title">MWCShop chất lượng uy tín</span>
                 <div class="linked">
                     <ul>
-                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-instalod"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href=""><i id="fb" class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i id="ins" class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i id="ytb" class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i id="tiktok" class="fa-brands fa-tiktok"></i></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="box-footer col-lg-3 col-sm-6">
+            <div class="box-footer col-lg-4 col-sm-6">
                 <div class="title">
                     <span><h3>Hỗ trợ khách hàng</h3></span>
                 </div>
                 <div class="content">
                     <ul>
-                        <li><a href="">Kiểm tra đơn hàng</a></li>
-                        <li><a href="">Chính sách thanh toán</a></li>
-                        <li><a href="">Vận chuyển giao nhận</a></li>
-                        <li><a href="">Đổi trả hàng</a></li>
+                        <li><a href=""><i class="fa-solid fa-angle-right"></i>Kiểm tra đơn hàng</a></li>
+                        <li><a href=""><i class="fa-solid fa-angle-right"></i>Chính sách thanh toán</a></li>
+                        <li><a href=""><i class="fa-solid fa-angle-right"></i>Vận chuyển giao nhận</a></li>
+                        <li><a href=""><i class="fa-solid fa-angle-right"></i>Đổi trả hàng</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="box-footer col-lg-3 col-sm-6">
+            <div class="box-footer col-lg-4 col-sm-6">
                 <div class="title">
                     <span><h3>Thông tin liên hệ</h3></span>
                 </div>
@@ -399,21 +281,54 @@
                     </ul>
                 </div>
             </div>
-            <div class="box-footer col-lg-3 col-sm-6">MV mới của sếp</div>
         </div>
         <div class="messenger">
             <span class="icon"><i class="fab fa-facebook-messenger"></i></span>
         </div>
-        <div class="hehe">
+        <div class="scroll-page">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+        <!-- <div class="modal-banner">
+            <div class="modal-overlay"></div>
             <div class="banner">
-                <span class="icon"><i id="hide" onclick="handleCloseBanner()" class="fas fa-times"></i></span>
+                <span class="close-banner">Tat</span>
                 <span class="image"><img src="./../images/banner-web-30.4-02.jpg" alt=""></span>
+            </div>
+        </div> -->
+
+        <!-- modal-->
+        <div class="modal hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-wrapper">
+                <i class="btn-close fa-solid fa-xmark"></i>
+                    <img class="img-modal" src="" alt="">
+                <div class="content-modal">
+                    <div class="title-modal"><a href=""></a></div>
+                    <hr/>
+                    <span>Gia tien :</span>
+                    <span class="price-modal"></span>
+                    <div class="description"></div>
+                    <div class="list-btn-pro">
+                        <button class="btn-detail-add"><i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng</button><button class="btn-detail">Mua ngay</button>
+                    </div>
+                    <div class="count">
+                        <input type="button" class="decrease" value="-" />
+                        <input type="text" class="count-number" value="1" />
+                        <input type="button" class="increase" value="+" />
+                      </div>
+                    <div class="contact-pro">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-youtube"></i></span>
+                        <span><i class="fa-brands fa-instalod"></i></span>
+                        <span><i class="fa-brands fa-tiktok"></i></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script src="./../library/flickity.js"></script>
 <script src="./../javascript/index.js"></script>
-<script src="./../library/fontawesome.min (1).js"></script>
 
 </html>
